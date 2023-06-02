@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="privacyPolicyVM" type="com.kamishasapplication.app.modules.privacypolicy.data.viewmodel.PrivacyPolicyVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnhome"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_18pxh"
+        android:layout_marginStart="@dimen/_8pxh"
+        android:layout_marginTop="@dimen/_15pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleteal_400">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_9pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowhome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_weight="0.28"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtHome}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_unstuck"/>
+                <LinearLayout android:id="@+id/linearRowdividercircle"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_131pxh"
+                    android:layout_weight="0.72"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_black_900_87_radius_1_5"
+                        android:id="@+id/viewDividercircle"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginTop="@dimen/_27pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtJuneCounter"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_18pxv"
+                        android:layout_weight="0.52"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{privacyPolicyVM.privacyPolicyModel.txtJuneCounter}"
+                        style="@style/txtInterregular14_1" tools:text="@string/lbl_1_june"/>
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_black_900_radius_18"
+                        android:id="@+id/btnClose"
+                        android:layout_height="@dimen/_36pxh"
+                        android:layout_marginStart="@dimen/_55pxh"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingHorizontal="@dimen/_12pxh"
+                        android:paddingVertical="@dimen/_12pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:gravity="start"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPrivacyPolicy"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtTitle}"
+                    style="@style/txtInterregular18" tools:text="@string/lbl_privacy_policy"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEffectiveSept"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtEffectiveSept}"
+                    style="@style/txtInterregular14_3" tools:text="@string/msg_effective_june"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtYoucanseeour"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_23pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtYoucanseeour}"
+                    style="@style/txtInterregular12_1" tools:text="@string/msg_you_can_see_our"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_33pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescription}"
+                    style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol3"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDescriptionOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_75pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionOne}"
+                    style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol3"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTitleOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_104pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtTitleOne}"
+                    style="@style/txtInterregular18" tools:text="@string/lbl_content"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowellipseseventeen"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_22pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_700_radius_1_5"
+                        android:id="@+id/viewEllipseSeventeen"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDescriptionTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_weight="0.98"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:singleLine="true"
+                        android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionTwo}"
+                        style="@style/txtInterregular14_4" tools:text="@string/msg_collection_of_i"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowellipseseventeenOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_700_radius_1_5"
+                        android:id="@+id/viewEllipseSeventeenOne"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDescriptionThree"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_weight="0.98"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:singleLine="true"
+                        android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionThree}"
+                        style="@style/txtInterregular14_4" tools:text="@string/msg_use_of_informat"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowellipseseventeenTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_700_radius_1_5"
+                        android:id="@+id/viewEllipseSeventeenTwo"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_9pxv"
+                        android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDescriptionFour"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_weight="0.98"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionFour}"
+                        style="@style/txtInterregular14_4" tools:text="@string/msg_sharing_of_info"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowellipseseventeenThree"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_700_radius_1_5"
+                        android:id="@+id/viewEllipseSeventeenThree"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_9pxv"
+                        android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDescriptionFive"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_weight="0.98"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionFive}"
+                        style="@style/txtInterregular14_4" tools:text="@string/msg_third_party_emb"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowellipseseventeenFour"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_700_radius_1_5"
+                        android:id="@+id/viewEllipseSeventeenFour"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_9pxv"
+                        android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDescriptionSix"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_weight="0.97"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionSix}"
+                        style="@style/txtInterregular14_4" tools:text="@string/lbl_your_choices"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="topicsRowModel" type="com.kamishasapplication.app.modules.topics.data.model.TopicsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTopicList"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowthumbnail"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.57" android:layout_width="0dp" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageThumbnail"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+                imageRes="@{@drawable/img_thumbnail_40x40}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_40x40"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEasytoUse"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_9pxv"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_weight="0.6" android:layout_width="0dp"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{topicsRowModel.txtEasytoUse}"
+                style="@style/txtPoppinsregular14_3" tools:text="@string/lbl_tutorials"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnFollow"
+            android:layout_height="@dimen/_32pxv"
+            android:layout_marginBottom="@dimen/_4pxv"
+            android:layout_marginStart="@dimen/_115pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="@dimen/_87pxh"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_5pxv"
+            android:paddingEnd="@dimen/_21pxh"
+            android:paddingStart="@dimen/_22pxh"
+            android:paddingTop="@dimen/_5pxv" android:singleLine="true"
+            android:text="@string/lbl_follow"
+            android:textAllCaps="false" style="@style/btnSolidRounded_2" tools:text="@string/lbl_follow"/>
+    </LinearLayout>
+</layout>

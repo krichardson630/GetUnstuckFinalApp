@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listlanguage1RowModel" type="com.kamishasapplication.app.modules.exploreposts.data.model.Listlanguage1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearArticleCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+        <TextView android:ellipsize="end" android:id="@+id/txtLanguage"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listlanguage1RowModel.txtLanguage}"
+            android:textAllCaps="true"
+            style="@style/txtPoppinsregular12_3" tools:text="@string/lbl_may_15_2023"/>
+        <TextView android:id="@+id/txtArticleTitle"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:text="@{listlanguage1RowModel.txtArticleTitle}"
+            style="@style/txtPoppinsbold16" tools:text="@string/msg_tips_to_acing_t"/>
+        <ImageView android:id="@+id/imageArticleThumbna"
+            android:layout_height="@dimen/_180pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_343pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_10pxh}"
+            imageRes="@{@drawable/img_articlethumbna}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_articlethumbna"/>
+    </LinearLayout>
+</layout>
