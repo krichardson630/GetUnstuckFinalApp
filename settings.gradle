@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "kamisha_s_application11"

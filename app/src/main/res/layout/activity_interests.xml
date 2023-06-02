@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsVM" type="com.kamishasapplication.app.modules.interests.data.viewmodel.InterestsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearInterests"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleteal_400">
+        <TextView android:ellipsize="end" android:id="@+id/txtWelcome"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:singleLine="true"
+            android:text="@{interestsVM.interestsModel.txtWelcome}"
+            style="@style/txtPoppinssemibold16" tools:text="@string/lbl_welcome"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTitletext"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_35pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:singleLine="true"
+            android:text="@{interestsVM.interestsModel.txtTitletext}"
+            style="@style/txtPoppinsbold20" tools:text="@string/msg_what_are_you_st"/>
+        <TextView android:id="@+id/txtDescriptiontes"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{interestsVM.interestsModel.txtDescriptiontes}"
+            style="@style/txtPoppinsregular16" tools:text="@string/msg_select_a_topic"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerInterests"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_12pxh}" tools:itemCount="9" tools:listitem="@layout/row_interests"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearNextsecction"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnNext"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_next"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

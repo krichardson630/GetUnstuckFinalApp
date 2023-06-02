@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsRowModel" type="com.kamishasapplication.app.modules.interests.data.model.InterestsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearIntrestrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtArt"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.19" android:layout_width="0dp"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingStart="@dimen/_14pxh"
+            android:paddingTop="@dimen/_9pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtArt}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_diy"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtCryptocurrency"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_weight="0.51" android:layout_width="0dp"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_9pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtCryptocurrency}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_car_issues"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtScience"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_weight="0.31" android:layout_width="0dp"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingStart="@dimen/_14pxh"
+            android:paddingTop="@dimen/_9pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtScience}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_finance"/>
+    </LinearLayout>
+</layout>

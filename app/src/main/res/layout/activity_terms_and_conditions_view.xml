@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="termsAndConditionsViewVM" type="com.kamishasapplication.app.modules.termsandconditionsview.data.viewmodel.TermsAndConditionsViewVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnhome"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_16pxh"
+        android:layout_marginStart="@dimen/_16pxh"
+        android:layout_marginTop="@dimen/_15pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleteal_400">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_11pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowhome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_weight="0.28"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtHome}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_unstuck"/>
+                <LinearLayout android:id="@+id/linearRowdividercircle"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_131pxh"
+                    android:layout_weight="0.72"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_black_900_87_radius_1_5"
+                        android:id="@+id/viewDividercircle"
+                        android:layout_height="@dimen/_3pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginTop="@dimen/_27pxv" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtJuneCounter"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_18pxv"
+                        android:layout_weight="0.52"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtJuneCounter}"
+                        style="@style/txtInterregular14_1" tools:text="@string/lbl_1_june"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnClose"
+                        android:layout_height="@dimen/_36pxh"
+                        android:layout_marginStart="@dimen/_55pxh"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingHorizontal="@dimen/_12pxh"
+                        android:paddingVertical="@dimen/_12pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_exit"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded_3" tools:text="@string/lbl_exit"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTermsandCondi"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleteal_400">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTermAndCondition"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtTermAndCondition}"
+                style="@style/txtInterregular18" tools:text="@string/msg_terms_and_condi"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEffectiveSept"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtEffectiveSept}"
+                style="@style/txtInterregular14_3" tools:text="@string/msg_effective_june"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYoucanseeour"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtYoucanseeour}"
+                style="@style/txtInterregular12_1" tools:text="@string/msg_you_can_see_our"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_33pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtDescription}"
+                style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol"/>
+            <TextView android:id="@+id/txtDescriptionOne"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_31pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtDescriptionOne}"
+                style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol2"/>
+            <TextView android:id="@+id/txtDescriptionTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_53pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtDescriptionTwo}"
+                style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol2"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescriptionThree"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_53pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtDescriptionThree}"
+                style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtTitle}"
+                style="@style/txtInterregular18" tools:text="@string/msg_your_account_an"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtDescriptionFour"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{termsAndConditionsViewVM.termsAndConditionsViewModel.txtDescriptionFour}"
+                style="@style/txtInterregular14_4" tools:text="@string/msg_lorem_ipsum_dol"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
